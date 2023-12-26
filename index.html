@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>ボートレース展開予想</title>
+</head>
+<body>
+  <div id="raceTrack" class="baseMargin">
+    <div class="triangle"></div>
+      <!-- 1号艇から6号艇までのボート -->
+      <div id="boat1" class="boat">1</div>
+      <div id="boat2" class="boat">2</div>
+      <div id="boat3" class="boat">3</div>
+      <div id="boat4" class="boat">4</div>
+      <div id="boat5" class="boat">5</div>
+      <div id="boat6" class="boat">6</div>
+  </div>
+  <div class="resetBtn baseMargin" onclick="resetPositions()">
+    <p class="resetBtn__inner">配置リセット</p>
+  </div>
+<script src="./assets/js/main.js"></script>
+</body>
+</html>
