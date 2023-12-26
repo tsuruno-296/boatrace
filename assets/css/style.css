@@ -89,6 +89,10 @@ body {
     cursor: pointer;
 }
 
+.resetBtn:hover {
+    opacity: 0.8;
+}
+
 .resetBtn__inner {
     color: #333;
 }
