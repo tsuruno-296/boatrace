@@ -88,7 +88,7 @@ function setBoatPositions(positions = {}) {
 }
 
 // 展開配置用
-const bote1 = {
+const course1 = {
   1: () => {
     const positions = {
       boat1: { left: 200, top: 95 },
@@ -101,7 +101,7 @@ const bote1 = {
     setBoatPositions(positions);
   }
 }
-const bote2 = {
+const course2 = {
   1: () => {
     const positions = {
       boat1: { left: 235, top: 95 },
@@ -125,7 +125,7 @@ const bote2 = {
     setBoatPositions(positions);
   }
 }
-const bote3 = {
+const course3 = {
   1: () => {
     const positions = {
       boat1: { left: 235, top: 65 },
@@ -160,7 +160,7 @@ const bote3 = {
     setBoatPositions(positions);
   }
 }
-const bote4 = {
+const course4 = {
   1: () => {
     const positions = {
       boat1: { left: 235, top: 65 },
@@ -195,7 +195,7 @@ const bote4 = {
     setBoatPositions(positions);
   }
 }
-const bote5 = {
+const course5 = {
   1: () => {
     const positions = {
       boat1: { left: 273, top: 46 },
@@ -230,7 +230,7 @@ const bote5 = {
     setBoatPositions(positions);
   }
 }
-const bote6 = {
+const course6 = {
   1: () => {
     const positions = {
       boat1: { left: 265, top: 62 },

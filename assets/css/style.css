@@ -50,11 +50,10 @@ body {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
-.boteLayoutContent .boteLayoutInner .boatNum {
+.boteLayoutContent .boteLayoutInner .courseNum {
     display: flex;
     align-items: center;
     padding-left: 1rem;
-    padding-right: 1rem;
     border-radius: 0.5rem;
 }
 
@@ -63,7 +62,7 @@ body {
     margin-right: 0.5rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    border: 3px solid;
+    border: 3px solid #ccc;
     border-radius: 0.5rem;
     cursor: pointer;
     background-color: #e3e3e3;
@@ -166,7 +165,6 @@ body {
     top:40%;
     width: 50px;
     height: calc(tan(60deg) * 50px / 2);
-    /* clip-path: polygon(50% 0, 100% 100%, 0 100%); */
     border: 1px solid #777;
     border-radius: 50%;
     background: repeating-conic-gradient(from 75deg at 50%,red 0deg 49deg,white 50deg 90deg);
