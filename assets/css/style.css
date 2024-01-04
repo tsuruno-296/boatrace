@@ -1,214 +1,227 @@
 body {
-    margin: 0 5px;
-    background-color: #eee;
-
+  margin: 0 5px;
+  background-color: #eee;
 }
 
 .baseMargin {
-    margin-top: 1rem;
-    margin-left: 1rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
 }
 
 .tbMargin {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .dispFlex {
-    display: flex;
+  display: flex;
 }
 
 #raceTrack {
-    position: relative;
-    width: 640px;
-    height: 440px;
-    border: 1px solid black;
-    background-color: #54B8DE;
+  position: relative;
+  width: 640px;
+  height: 440px;
+  border: 1px solid black;
+  background-color: #54b8de;
 }
 
 .resetBtn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 160px;
-    height: 32px;
-    border-radius: 0.5rem;
-    background-color: #ccc;
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 32px;
+  border-radius: 0.5rem;
+  background-color: #ccc;
+  cursor: pointer;
 }
 
 .resetBtn:hover,
 .boteLayoutBtn:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 .resetBtn__inner {
-    color: #333;
+  color: #333;
 }
 
 .boteLayoutContent .boteLayoutInner {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 .boteLayoutContent .boteLayoutInner .courseNum {
-    display: flex;
-    align-items: center;
-    padding-left: 1rem;
-    border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  border-radius: 0.5rem;
 }
 
 .boteLayoutBtn {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    border: 3px solid #ccc;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    background-color: #e3e3e3;
-    color: #333;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border: 3px solid #ccc;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: #e3e3e3;
+  color: #333;
 }
 
 .boat {
-    position: absolute;
-    width: 72px;
-    height: 33px;
-    border-bottom: 2px solid #555;
-    clip-path: polygon(50% 40%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
-    text-align: center;
-    line-height: 45px;
-    color: #333;
-    cursor: pointer;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-drag: none;
-    -khtml-user-drag: none;
+  position: absolute;
+  width: 72px;
+  height: 33px;
+  border-bottom: 2px solid #555;
+  clip-path: polygon(50% 40%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  text-align: center;
+  line-height: 45px;
+  color: #333;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
 }
 
 .colorBoat1 {
-    background-color:#fff;
+  background-color: #fff;
 }
 
 .colorBoat2 {
-    background-color:#000;
-    color: #eee;
+  background-color: #000;
+  color: #eee;
 }
 
 .colorBoat3 {
-    background-color:#EA3323;
+  background-color: #ea3323;
 }
 
 .colorBoat4 {
-    background-color:#5297F8;
+  background-color: #5297f8;
 }
 
 .colorBoat5 {
-    background-color:#FEFF55;
+  background-color: #feff55;
 }
 
 .colorBoat6 {
-    background-color:#67C93C;
+  background-color: #67c93c;
 }
 
 .borderColorBoat1 {
-    border-color: #fff;
+  border-color: #fff;
 }
 
 .borderColorBoat2 {
-    border-color: #000;
+  border-color: #000;
 }
 
 .borderColorBoat3 {
-    border-color: #EA3323;
+  border-color: #ea3323;
 }
 
 .borderColorBoat4 {
-    border-color: #5297F8;
+  border-color: #5297f8;
 }
 
 .borderColorBoat5 {
-    border-color: #FEFF55;
+  border-color: #feff55;
 }
 
 .borderColorBoat6 {
-    border-color: #67C93C;
+  border-color: #67c93c;
 }
 
 #boat1 {
-    bottom: calc(33px * 5);
+  bottom: calc(33px * 5);
 }
 
 #boat2 {
-    bottom: calc(33px * 4);
+  bottom: calc(33px * 4);
 }
 
 #boat3 {
-    bottom: calc(33px * 3);
+  bottom: calc(33px * 3);
 }
 #boat4 {
-    bottom: calc(33px * 2);
+  bottom: calc(33px * 2);
 }
 
 #boat5 {
-    bottom: 33px;
+  bottom: 33px;
 }
 
 #boat6 {
-    bottom: 0;
+  bottom: 0;
 }
 
 .triangle {
-    position: absolute;
-    left:24%;
-    top:40%;
-    width: 50px;
-    height: calc(tan(60deg) * 50px / 2);
-    border: 1px solid #777;
-    border-radius: 50%;
-    background: repeating-conic-gradient(from 75deg at 50%,red 0deg 49deg,white 50deg 90deg);
-    background-color: #E34C3D;
+  position: absolute;
+  left: 24%;
+  top: 40%;
+  width: 50px;
+  height: calc(tan(60deg) * 50px / 2);
+  border: 1px solid #777;
+  border-radius: 50%;
+  background: repeating-conic-gradient(
+    from 75deg at 50%,
+    red 0deg 49deg,
+    white 50deg 90deg
+  );
+  background-color: #e34c3d;
 }
 
 /* スマートフォンサイズ用のスタイル */
 @media screen and (max-width: 520px) {
-    #raceTrack {
-        width: 85%;
-        height: 240px;
-    }
-    .boat {
-        width: 32px;
-        height: 24px;
-        line-height: 32px;
-        font-size: 12px;
-    }
-    .triangle {
-        left: 16%;
-        top: 40%;
-        width: 40px;
-    }
-    #boat1 {
-        bottom: calc(24px * 5);
-    }
+  #raceTrack {
+    width: 85%;
+    height: 240px;
+  }
+  .boat {
+    width: 32px;
+    height: 24px;
+    line-height: 32px;
+    font-size: 12px;
+  }
+  .triangle {
+    left: 16%;
+    top: 40%;
+    width: 40px;
+  }
+  #boat1 {
+    bottom: calc(24px * 5);
+  }
 
-    #boat2 {
-        bottom: calc(24px * 4);
-        background-color:#000;
-    }
+  #boat2 {
+    bottom: calc(24px * 4);
+    background-color: #000;
+  }
 
-    #boat3 {
-        bottom: calc(24px * 3);
-    }
-    #boat4 {
-        bottom: calc(24px * 2);
-    }
+  #boat3 {
+    bottom: calc(24px * 3);
+  }
+  #boat4 {
+    bottom: calc(24px * 2);
+  }
 
-    #boat5 {
-        bottom: 24px;
-    }
+  #boat5 {
+    bottom: 24px;
+  }
 
-    #boat6 {
-        bottom: 0;
-    }
+  #boat6 {
+    bottom: 0;
+  }
+}
+
+.reel {
+  margin-right: 0.5rem;
+  width: 64px;
+  height: 64px;
+  border: 3px solid #ccc;
+  display: inline-block;
+  font-size: 40px;
+  text-align: center;
 }

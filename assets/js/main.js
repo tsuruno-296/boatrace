@@ -4,14 +4,14 @@ let selectedBoat = null;
 function toggleDisplayToolContainer() {
   const toolContainer = document.getElementsByClassName("toolContainer")[0];
   if (!toolContainer) return;
-  toolContainer.style.display = toolContainer.style.display === "none" ? "block" : "none";
+  toolContainer.style.display =
+    toolContainer.style.display === "none" ? "block" : "none";
 }
-
 
 // ボートの位置を初期化
 function resetPositions() {
-  const boats = document.getElementsByClassName('boat');
-  Array.from(boats).forEach(elms => elms.style = null );
+  const boats = document.getElementsByClassName("boat");
+  Array.from(boats).forEach((elms) => (elms.style = null));
 }
 
 // ボートを移動する関数
@@ -79,8 +79,8 @@ function setBoatPositions(positions = {}) {
     const position = positions[boatId];
 
     // spはpcの半分で配置
-    const left = isSpSize ? (position.left / 2) : position.left;
-    const top = isSpSize ? (position.top / 2) : position.top;
+    const left = isSpSize ? position.left / 2 : position.left;
+    const top = isSpSize ? position.top / 2 : position.top;
 
     boat.style.left = Math.trunc(left) + "px";
     boat.style.top = Math.trunc(top) + "px";
@@ -99,8 +99,8 @@ const course1 = {
       boat6: { left: 352, top: 205 },
     };
     setBoatPositions(positions);
-  }
-}
+  },
+};
 const course2 = {
   1: () => {
     const positions = {
@@ -123,8 +123,8 @@ const course2 = {
       boat6: { left: 349, top: 179 },
     };
     setBoatPositions(positions);
-  }
-}
+  },
+};
 const course3 = {
   1: () => {
     const positions = {
@@ -158,8 +158,8 @@ const course3 = {
       boat6: { left: 351, top: 198.5 },
     };
     setBoatPositions(positions);
-  }
-}
+  },
+};
 const course4 = {
   1: () => {
     const positions = {
@@ -193,8 +193,8 @@ const course4 = {
       boat6: { left: 312, top: 175 },
     };
     setBoatPositions(positions);
-  }
-}
+  },
+};
 const course5 = {
   1: () => {
     const positions = {
@@ -228,8 +228,8 @@ const course5 = {
       boat6: { left: 284, top: 173 },
     };
     setBoatPositions(positions);
-  }
-}
+  },
+};
 const course6 = {
   1: () => {
     const positions = {
@@ -263,5 +263,104 @@ const course6 = {
       boat6: { left: 196, top: 129 },
     };
     setBoatPositions(positions);
+  },
+};
+
+// 運試し関数
+function weightedRandomSelect(weights, items, count) {
+  let selectedItems = [];
+  let remainingItems = items.slice(); // コピーを作成して元の配列を変更しない
+  let remainingWeights = weights.slice();
+
+  for (let i = 0; i < count; i++) {
+    let totalWeight = remainingWeights.reduce((a, b) => a + b, 0);
+    let randomNum = Math.random() * totalWeight;
+    let weightSum = 0;
+    let itemSelected = false;
+
+    for (let j = 0; j < remainingItems.length; j++) {
+      weightSum += remainingWeights[j];
+      if (randomNum <= weightSum) {
+        selectedItems.push(remainingItems[j]);
+        // 選択されたアイテムと重みを除外
+        remainingItems.splice(j, 1);
+        remainingWeights.splice(j, 1);
+        itemSelected = true;
+        break;
+      }
+    }
+
+    // アイテムが選択されなかった場合（エラーハンドリング）
+    if (!itemSelected) {
+      console.error("No item selected. This shouldn't happen.");
+    }
+  }
+
+  return selectedItems;
+}
+
+let courses = [1, 2, 3, 4, 5, 6];
+let medians = [62.05, 27.4, 23.25, 20.9, 12.65, 7.35];
+let timers = [null, null, null];
+let interval = 100; // スロットの回転速度
+
+function runSlot(num, target) {
+  let slotElement = document.getElementById(`slot${num}`);
+  let currentValue = parseInt(slotElement.textContent, 10);
+
+  // スロットの表示を初期化('-'の場合は1に設定)
+  if (isNaN(currentValue) || currentValue < 1 || currentValue > 6) {
+    currentValue = 1;
+  }
+  const targetClassList = slotElement.className;
+  const myRegExp = new RegExp(/colorBoat\S+/, "g");
+  const myMatched = targetClassList.match(myRegExp) || [];
+  for (let n = 0; n < myMatched.length; n++) {
+    slotElement.classList.remove(myMatched[n]);
+  }
+  // 目標値に到達したら停止
+  if (currentValue === target) {
+    clearTimeout(timers[num - 1]);
+    slotElement.textContent = currentValue;
+    slotElement.classList.add(`colorBoat${currentValue}`);
+  } else {
+    // 1〜6の範囲でカウントアップ
+    currentValue = currentValue < 6 ? currentValue + 1 : 1;
+    slotElement.textContent = currentValue;
+    timers[num - 1] = setTimeout(() => runSlot(num, target), interval);
+  }
+}
+
+function initializeSlots() {
+  for (let i = 1; i <= 3; i++) {
+    document.getElementById(`slot${i}`).textContent = "-";
+  }
+}
+
+function spin() {
+  // スロットを初期化
+  initializeSlots();
+
+  // 以前のタイマーをクリア
+  timers.forEach((timer) => {
+    if (timer) {
+      clearTimeout(timer);
+    }
+  });
+
+  // 抽選された値を取得
+  const upperLimit = 14;
+  const lowerLimit = 0;
+  let selectedCourses = [...Array(upperLimit + 1)].map((i) =>
+    weightedRandomSelect([...medians], [...courses], 3).sort()
+  );
+
+  let random = Math.floor(
+    Math.random() * (upperLimit - lowerLimit + 1) + lowerLimit
+  );
+  if (random > upperLimit) random = 1;
+  // 各スロットを目標値まで回転させる
+  for (let i = 0; i < 3; i++) {
+    runSlot(i + 1, selectedCourses[random][i]);
   }
 }

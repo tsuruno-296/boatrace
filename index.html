@@ -1,15 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/css/reset.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <title>ボートレース展開予想ボード</title>
-</head>
-<body>
-  <div id="raceTrack" class="baseMargin">
-    <div class="triangle" onclick="toggleDisplayToolContainer()"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>ボートレース展開予想ボード</title>
+  </head>
+  <body>
+    <div id="raceTrack" class="baseMargin">
+      <div class="triangle" onclick="toggleDisplayToolContainer()"></div>
       <!-- 1号艇から6号艇までのボート -->
       <div id="boat1" class="boat colorBoat1">1</div>
       <div id="boat2" class="boat colorBoat2">2</div>
@@ -17,62 +17,79 @@
       <div id="boat4" class="boat colorBoat4">4</div>
       <div id="boat5" class="boat colorBoat5">5</div>
       <div id="boat6" class="boat colorBoat6">6</div>
-  </div>
-  <div class="toolContainer baseMargin">
-    <div class="resetBtn" onclick="resetPositions()">
-      <p class="resetBtn__inner">配置リセット</p>
     </div>
-    <div class="tbMargin">
-      <p><コース別決まり手配置例(枠なり想定)></p>
-      <ul class="boteLayoutContent">
-        <li class="boteLayoutInner dispFlex">
-          <p class="courseNum">1コース：</p>
-          <ul>
-            <li class="boteLayoutBtn" onclick="course1[1]()">逃げ</li>
-          </ul>
-        </li>
-        <li class="boteLayoutInner dispFlex">
-          <p class="courseNum">2コース：</p>
-          <ul class="dispFlex">
-            <li class="boteLayoutBtn" onclick="course2[1]()">差し</li>
-            <li class="boteLayoutBtn" onclick="course2[2]()">捲り</li>
-          </ul>
-        </li>
-        <li class="boteLayoutInner dispFlex">
-          <p class="courseNum">3コース：</p>
-          <ul class="dispFlex">
-            <li class="boteLayoutBtn" onclick="course3[1]()">差し</li>
-            <li class="boteLayoutBtn" onclick="course3[2]()">捲り</li>
-            <li class="boteLayoutBtn" onclick="course3[3]()">捲差し</li>
-          </ul>
-        </li>
-        <li class="boteLayoutInner dispFlex">
-          <p class="courseNum">4コース：</p>
-          <ul class="dispFlex">
-            <li class="boteLayoutBtn" onclick="course4[1]()">差し</li>
-            <li class="boteLayoutBtn" onclick="course4[2]()">捲り</li>
-            <li class="boteLayoutBtn" onclick="course4[3]()">捲差し</li>
-          </ul>
-        </li>
-        <li class="boteLayoutInner dispFlex">
-          <p class="courseNum">5コース：</p>
-          <ul class="dispFlex">
-            <li class="boteLayoutBtn" onclick="course5[1]()">差し</li>
-            <li class="boteLayoutBtn" onclick="course5[2]()">捲り</li>
-            <li class="boteLayoutBtn" onclick="course5[3]()">捲差し</li>
-          </ul>
-        </li>
-        <li class="boteLayoutInner dispFlex">
-          <p class="courseNum">6コース：</p>
-          <ul class="dispFlex">
-            <li class="boteLayoutBtn" onclick="course6[1]()">差し</li>
-            <li class="boteLayoutBtn" onclick="course6[2]()">捲り</li>
-            <li class="boteLayoutBtn" onclick="course6[3]()">捲差し</li>
-          </ul>
-        </li>
-      </ul>
+    <div class="toolContainer baseMargin">
+      <div class="resetBtn" onclick="resetPositions()">
+        <p class="resetBtn__inner">配置リセット</p>
+      </div>
+      <div class="tbMargin">
+        <p><コース別決まり手配置例(枠なり想定)></p>
+        <ul class="boteLayoutContent">
+          <li class="boteLayoutInner dispFlex">
+            <p class="courseNum">1コース：</p>
+            <ul>
+              <li class="boteLayoutBtn" onclick="course1[1]()">逃げ</li>
+            </ul>
+          </li>
+          <li class="boteLayoutInner dispFlex">
+            <p class="courseNum">2コース：</p>
+            <ul class="dispFlex">
+              <li class="boteLayoutBtn" onclick="course2[1]()">差し</li>
+              <li class="boteLayoutBtn" onclick="course2[2]()">捲り</li>
+            </ul>
+          </li>
+          <li class="boteLayoutInner dispFlex">
+            <p class="courseNum">3コース：</p>
+            <ul class="dispFlex">
+              <li class="boteLayoutBtn" onclick="course3[1]()">差し</li>
+              <li class="boteLayoutBtn" onclick="course3[2]()">捲り</li>
+              <li class="boteLayoutBtn" onclick="course3[3]()">捲差し</li>
+            </ul>
+          </li>
+          <li class="boteLayoutInner dispFlex">
+            <p class="courseNum">4コース：</p>
+            <ul class="dispFlex">
+              <li class="boteLayoutBtn" onclick="course4[1]()">差し</li>
+              <li class="boteLayoutBtn" onclick="course4[2]()">捲り</li>
+              <li class="boteLayoutBtn" onclick="course4[3]()">捲差し</li>
+            </ul>
+          </li>
+          <li class="boteLayoutInner dispFlex">
+            <p class="courseNum">5コース：</p>
+            <ul class="dispFlex">
+              <li class="boteLayoutBtn" onclick="course5[1]()">差し</li>
+              <li class="boteLayoutBtn" onclick="course5[2]()">捲り</li>
+              <li class="boteLayoutBtn" onclick="course5[3]()">捲差し</li>
+            </ul>
+          </li>
+          <li class="boteLayoutInner dispFlex">
+            <p class="courseNum">6コース：</p>
+            <ul class="dispFlex">
+              <li class="boteLayoutBtn" onclick="course6[1]()">差し</li>
+              <li class="boteLayoutBtn" onclick="course6[2]()">捲り</li>
+              <li class="boteLayoutBtn" onclick="course6[3]()">捲差し</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="dispFlex" style="flex-direction: column">
+        <p style="margin-bottom: 0.5rem"><運試し(BOX出目)></p>
+        <div class="dispFlex">
+          <div id="slot1" class="reel">-</div>
+          <div id="slot2" class="reel">-</div>
+          <div id="slot3" class="reel">-</div>
+          <button
+            class="boteLayoutBtn"
+            style="width: 64px; text-align: center"
+            onclick="spin()"
+          >
+            抽選
+          </button>
+        </div>
+      </div>
     </div>
-  </div>
-<script src="./assets/js/main.js"></script>
-</body>
+
+    <script src="./assets/js/main.js"></script>
+  </body>
 </html>
