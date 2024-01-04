@@ -1,10 +1,10 @@
 let selectedBoat = null;
 
 // 表示切り替え
-function toggleDisplayToolContent() {
-  const toolContent = document.getElementsByClassName("toolContent")[0];
-  if (!toolContent) return;
-  toolContent.style.display = toolContent.style.display === "none" ? "block" : "none";
+function toggleDisplayToolContainer() {
+  const toolContainer = document.getElementsByClassName("toolContainer")[0];
+  if (!toolContainer) return;
+  toolContainer.style.display = toolContainer.style.display === "none" ? "block" : "none";
 }
 
 
