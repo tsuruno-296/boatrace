@@ -300,7 +300,8 @@ function weightedRandomSelect(weights, items, count) {
 }
 
 let courses = [1, 2, 3, 4, 5, 6];
-let medians = [62.05, 27.4, 23.25, 20.9, 12.65, 7.35];
+// let medians = [62.05, 27.4, 23.25, 20.9, 12.65, 7.35];
+let medians = [100, 100, 100, 100, 100, 100];
 let timers = [null, null, null];
 let interval = 100; // スロットの回転速度
 
