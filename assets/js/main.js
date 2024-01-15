@@ -365,3 +365,12 @@ function spin() {
     runSlot(i + 1, selectedCourses[random][i]);
   }
 }
+
+function flexTextarea(el) {
+  const dummy = el.querySelector(".flexTextarea__dummy");
+  el.querySelector(".flexTextarea__textarea").addEventListener("input", (e) => {
+    dummy.textContent = e.target.value + "\u200b";
+  });
+}
+
+document.querySelectorAll(".flexTextarea").forEach(flexTextarea);
