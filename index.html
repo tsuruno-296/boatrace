@@ -8,7 +8,7 @@
     <title>ボートレース展開予想ボード</title>
   </head>
   <body>
-    <div id="capture" class="mainContainer baseMargin">
+    <div class="mainContainer">
       <div class="memoContainer tbMargin">
         <label for="flexTextarea">memo：</label>
         <div class="flexTextarea">
@@ -17,7 +17,7 @@
         </div>
       </div>
       <div id="raceTrack">
-        <div class="triangle" onclick="toggleDisplayToolContainer()"></div>
+        <div class="turnMark" onclick="toggleDisplayToolContainer()"></div>
         <!-- 1号艇から6号艇までのボート -->
         <div id="boat1" class="boat colorBoat1">1</div>
         <div id="boat2" class="boat colorBoat2">2</div>
@@ -26,11 +26,11 @@
         <div id="boat5" class="boat colorBoat5">5</div>
         <div id="boat6" class="boat colorBoat6">6</div>
       </div>
-      <div class="toolContainer tbMargin">
-        <div class="resetBtn" onclick="resetPositions()">
-          <p class="resetBtn__inner">配置リセット</p>
-        </div>
-        <div class="tbMargin">
+      <div class="resetBtn tbMargin" onclick="resetPositions()">
+        <p class="resetBtn__inner">配置リセット</p>
+      </div>
+      <div class="toolContainer">
+        <div>
           <p><コース別決まり手配置例(枠なり想定)></p>
           <ul class="boteLayoutContent">
             <li class="boteLayoutInner dispFlex">
@@ -81,7 +81,7 @@
           </ul>
         </div>
 
-        <div class="dispFlex" style="flex-direction: column">
+        <div class="dispFlex" style="flex-direction: column; margin-bottom: 1rem;">
           <p style="margin-bottom: 0.5rem"><運試し(BOX出目)></p>
           <div class="dispFlex">
             <div id="slot1" class="reel">-</div>

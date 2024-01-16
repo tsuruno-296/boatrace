@@ -1,11 +1,6 @@
 body {
-  margin: 0 5px;
   background-color: #eee;
-}
-
-.baseMargin {
-  margin-top: 1rem;
-  margin-left: 1rem;
+  overflow: hidden;
 }
 
 .tbMargin {
@@ -15,6 +10,13 @@ body {
 
 .dispFlex {
   display: flex;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1.5rem;
+  height: 100vh;
 }
 
 #raceTrack {
@@ -158,7 +160,7 @@ body {
   bottom: 0;
 }
 
-.triangle {
+.turnMark {
   position: absolute;
   left: 24%;
   top: 40%;
@@ -172,6 +174,11 @@ body {
     white 50deg 90deg
   );
   background-color: #e34c3d;
+}
+
+.toolContainer {
+  flex: 1;
+  overflow-y: scroll;
 }
 
 .reel {
@@ -230,16 +237,16 @@ body {
 /* スマートフォンサイズ用のスタイル */
 @media screen and (max-width: 520px) {
   #raceTrack {
-    width: 85%;
+    width: 100%;
     height: 240px;
   }
   .boat {
-    width: 32px;
+    width: 40px;
     height: 24px;
     line-height: 32px;
     font-size: 12px;
   }
-  .triangle {
+  .turnMark {
     left: 16%;
     top: 40%;
     width: 40px;
@@ -269,6 +276,6 @@ body {
   }
 
   .flexTextarea {
-    width: 85%;
+    width: 100%;
   }
 }
