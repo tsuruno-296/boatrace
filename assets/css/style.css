@@ -13,10 +13,8 @@ body {
 }
 
 .mainContainer {
-  display: flex;
-  flex-direction: column;
   margin: 0 1.5rem;
-  height: 100vh;
+  height: calc(100% - 1rem);
 }
 
 #raceTrack {
@@ -177,8 +175,10 @@ body {
 }
 
 .toolContainer {
-  flex: 1;
-  overflow-y: scroll;
+  position: absolute;
+  left: 1.5rem;
+  width: max-content;
+  overflow: auto;
 }
 
 .reel {
@@ -277,5 +277,9 @@ body {
 
   .flexTextarea {
     width: 100%;
+  }
+
+  .toolContainer {
+    height: 260px;
   }
 }

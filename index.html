@@ -9,25 +9,27 @@
   </head>
   <body>
     <div class="mainContainer">
-      <div class="memoContainer tbMargin">
-        <label for="flexTextarea">memo：</label>
-        <div class="flexTextarea">
-          <div class="flexTextarea__dummy" aria-hidden="true"></div>
-          <textarea id="flexTextarea" class="flexTextarea__textarea"></textarea>
+      <div class="boardContainer">
+        <div class="memoContainer tbMargin">
+          <label for="flexTextarea">memo：</label>
+          <div class="flexTextarea">
+            <div class="flexTextarea__dummy" aria-hidden="true"></div>
+            <textarea id="flexTextarea" class="flexTextarea__textarea"></textarea>
+          </div>
         </div>
-      </div>
-      <div id="raceTrack">
-        <div class="turnMark" onclick="toggleDisplayToolContainer()"></div>
-        <!-- 1号艇から6号艇までのボート -->
-        <div id="boat1" class="boat colorBoat1">1</div>
-        <div id="boat2" class="boat colorBoat2">2</div>
-        <div id="boat3" class="boat colorBoat3">3</div>
-        <div id="boat4" class="boat colorBoat4">4</div>
-        <div id="boat5" class="boat colorBoat5">5</div>
-        <div id="boat6" class="boat colorBoat6">6</div>
-      </div>
-      <div class="resetBtn tbMargin" onclick="resetPositions()">
-        <p class="resetBtn__inner">配置リセット</p>
+        <div id="raceTrack">
+          <div class="turnMark" onclick="toggleDisplayToolContainer()"></div>
+          <!-- 1号艇から6号艇までのボート -->
+          <div id="boat1" class="boat colorBoat1">1</div>
+          <div id="boat2" class="boat colorBoat2">2</div>
+          <div id="boat3" class="boat colorBoat3">3</div>
+          <div id="boat4" class="boat colorBoat4">4</div>
+          <div id="boat5" class="boat colorBoat5">5</div>
+          <div id="boat6" class="boat colorBoat6">6</div>
+        </div>
+        <div class="resetBtn tbMargin" onclick="resetPositions()">
+          <p class="resetBtn__inner">配置リセット</p>
+        </div>
       </div>
       <div class="toolContainer">
         <div>
