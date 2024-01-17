@@ -28,8 +28,13 @@ function moveBoat(event) {
     ? event.touches[0].clientY
     : event.clientY;
 
-  const left = posX - raceTrackRect.left - selectedBoat.offsetWidth / 2;
-  const top = posY - raceTrackRect.top - selectedBoat.offsetHeight / 2;
+  // ボートの新しい位置を計算
+  let left = posX - raceTrackRect.left - selectedBoat.offsetWidth / 2;
+  let top = posY - raceTrackRect.top - selectedBoat.offsetHeight / 2;
+
+  // ボートが raceTrack の内部に収まるように位置を制限
+  left = Math.max(0, Math.min(raceTrackRect.width - selectedBoat.offsetWidth, left));
+  top = Math.max(0, Math.min(raceTrackRect.height - selectedBoat.offsetHeight, top));
 
   selectedBoat.style.left = left + "px";
   selectedBoat.style.top = top + "px";
@@ -55,7 +60,6 @@ function handleDragEnd() {
 // マウスイベントのリスナー
 document.querySelectorAll(".boat").forEach((boat) => {
   boat.addEventListener("mousedown", handleDragStart);
-  boat.addEventListener("mouseup", handleDragEnd);
 });
 
 // タッチイベントのリスナー
@@ -65,8 +69,12 @@ document.querySelectorAll(".boat").forEach((boat) => {
 });
 
 // ドラッグとタッチムーブのイベントリスナー
-document.getElementById("raceTrack").addEventListener("mousemove", moveBoat);
-document.getElementById("raceTrack").addEventListener("touchmove", moveBoat);
+document.addEventListener("mousemove", moveBoat);
+document.addEventListener("mouseup", handleDragEnd);
+document.addEventListener("touchmove", moveBoat);
+
+// タッチ終了時のイベントリスナー
+document.addEventListener("touchend", handleDragEnd);
 
 // ボートの位置設定
 const widthSpSize = 520; // spの横幅定義(メディアクエリと同じ値)
