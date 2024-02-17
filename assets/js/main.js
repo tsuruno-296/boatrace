@@ -384,7 +384,7 @@ function flexTextarea(el) {
 document.querySelectorAll(".flexTextarea").forEach(flexTextarea);
 
 const locations = ["桐生","戸田","江戸川","平和島","多摩川","浜名湖","蒲郡","常滑","津","三国","びわこ","住之江","尼崎","鳴門","丸亀","児島","宮島","徳山","下関","若松","芦屋","福岡","唐津","大村"];
-const defaultLocation = "場選択↕︎";
+const defaultLocation = "場名↕︎";
 // locations配列からオブジェクトを生成
 let locationsWithCode = locations.map((name, index) => {
   return { code: String(index + 1).padStart(2, '0'), name };
