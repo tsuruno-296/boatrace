@@ -15,6 +15,11 @@ body {
   margin: 0 1.5rem;
 }
 
+.selectContainer {
+  color: #333;
+  font-weight: bold;
+}
+
 #raceTrack {
   position: relative;
   width: 640px;
